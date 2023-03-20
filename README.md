@@ -1,8 +1,8 @@
-Database Shard GitHub.
+##Database Shard GitHub.
 
-For this project we need a vitual machine running with OS ubuntu and you need to install docker and docker-compose.
+For this project we need a virtual machine running with OS ubuntu and you need to install docker and docker-compose, This project build an app in docker-compose that se up a sharded database using Maxscale server that running in server1 and server2.
 
-this is how to install docker community edition.
+##This is how to install docker community edition.
 
 sudo apt update
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
@@ -11,12 +11,19 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 sudo apt update
 sudo apt install docker-ce
 
-Check the Docker status with command.
+##Check the Docker status with command.
+
 sudo systemctl run docker
 sudo systenctl enable docker
 sudo systemctl status docker.
 
-Installation docker compose:
+##Running
+
+Pull and run MaxScale
+docker pull mariadb/maxscale:latest
+docker run -d --name mxs mariadb/maxscale:latest
+
+##Installation docker compose:
 
 sudo apt install docker-compose.
 
@@ -24,7 +31,7 @@ install client access to MariaDB
 
 sudo apt install MariaDB-client.
 
-set up and clone maxscale-docker repositoy rom Zohan GitHub.
+##set up and clone maxscale-docker repositoy rom Zohan GitHub.
 
 https://github.com/Zohan/maxscale-docker.git
 
@@ -51,7 +58,7 @@ once the example.cnf file edited, create SQL shard files inside the master direc
 
 /maxscale/maxscale-docker/maxscale/sql/master#
 
-Use the following command to list the servers
+##Use the following command to list the servers
 
 docker-compose exec maxscale maxctrl list servers
 
@@ -72,7 +79,7 @@ mariadb -umaxuser -pmaxpwd -h 127.0.0.1 -P 4000
 
 I got helped by Abdirizak kulmiye who he is the tutor for our class. 
 
-Refrences:
+##Refrences:
 
 Repository was fork from Dr. Zak (https://github.com/Zohan/maxscale-docker.git)
 The Readme.md file was also edit from Dr. Zak gitHup (https://github.com/Zohan/maxscale-docker.git)
