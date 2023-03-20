@@ -35,7 +35,7 @@ sudo apt install MariaDB-client.
 
 https://github.com/Zohan/maxscale-docker.git
 
-we will direct to maxscale directory. “ /maxscale/maxscale-docker/maxscale# “ and run the following command:
+## we will direct to maxscale directory. “ /maxscale/maxscale-docker/maxscale# “ and run the following command:
 
 docker-compose build
 docker-compose up -d
