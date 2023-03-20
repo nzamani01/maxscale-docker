@@ -1,3 +1,9 @@
+## Name: Nasar Ahmad Zamani, Email: nzamani01@student.rtc.edu, Date: 03/17/23, Class: CNE370
+## The follwing python codes connect to the database in the Ubuntu shard databases and print the output of the zipcodes
+## Print the last 10 rows of the zipcodes. 
+## Print the first 10 rows of the zipcodes.
+## Print the smallest and the largest numbers in zipcode.
+                
 import pymysql
 db = pymysql.connect(host="192.168.10.53", port=4000, user="maxuser", passwd="maxpwd")
 cursor = db.cursor()
